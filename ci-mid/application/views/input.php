@@ -11,16 +11,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <center><div class="form-group col-lg-4">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="name">
+                    <input type="text" class="form-control" name="name"> <br><br>
                      <label>E-mail</label>
-                    <input type="text" class="form-control" name="e-mail">
+                    <input type="text" class="form-control" name="e-mail"><br><br>
                      <label>Username</label>
-                    <input type="text" class="form-control" name="username">
+                    <input type="text" class="form-control" name="username"><br><br>
                      <label>Password</label>
-                    <input type="text" class="form-control" name="password">
+                    <input type="text" class="form-control" name="password"><br><br>
                      <label>Repassword</label>
-                    <input type="text" class="form-control" name="repassword">
+                    <input type="text" class="form-control" name="repassword"><br><br><br>
                 </div></center><br>
+                
                     <center><button type="submit" class="btn btn-default">Submit</button></center>
                 </div>
     </form>
