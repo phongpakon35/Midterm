@@ -3,8 +3,8 @@
  <?php echo validation_errors(); 
 
 echo $error;
-echo $file['file_name'];
-printf('<img src="%s">',base_url('uploads').'/'.$file['file_name']);
+echo สมัครสมาชิกเรียบร้อยแล้ว;
+
 
 
  ?>

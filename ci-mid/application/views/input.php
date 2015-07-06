@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <form role="form" method="post" action="<?php echo base_url('index.php/Receiveform/received');?>" enctype="multipart/form-data">
             <div class="row">
-                <center><div class="form-group col-lg-4">
+                <center><div class="form-group col-lg-4"><br><br><br><br>
                     <label>Name</label>
                     <input type="text" class="form-control" name="name"> <br><br>
                      <label>E-mail</label>
@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      <label>Password</label>
                     <input type="text" class="form-control" name="password"><br><br>
                      <label>Repassword</label>
-                    <input type="text" class="form-control" name="repassword"><br><br><br>
+                    <input type="text" class="form-control" name="repassword"><br>
                 </div></center><br>
                 
                     <center><button type="submit" class="btn btn-default">Submit</button></center>
