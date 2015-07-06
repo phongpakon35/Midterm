@@ -1,10 +1,15 @@
 <?php
 
-class Registerz extends CI_model
+class Register extends CI_model
 {
 	var $id;
 	var $name;
-	var $picture;
+	var $email;
+	var $username; 
+	var $password;
+	var $repassword; 
+
+
 
 
 	function __construct()
@@ -12,101 +17,69 @@ class Registerz extends CI_model
 		$this->load->database();
 		parent::__construct();
 	}
-	###### SET : Id () ######
+	
 	function setId($Id)
 	{
 		$this->Id = $Id;
 	}
 
-	###### GET : Id () ######
+	
 	function getId()
 	{
 		return $this->Id;
 	}
-	###### SET : Name () ######
+	
 	function setName($Name)
 	{
 		$this->Name = $Name;
 	}
 
-	###### GET : Name () ######
+	
 	function getName()
 	{
 		return $this->Name;
 	}
-	###### SET : Picture () ######
-	function setPicture($Picture)
+		
+		public function setEmail($email)
 	{
-		$this->Picture = $Picture;
+		$this->email = $email;
 	}
 
-	###### GET : Picture () ######
-	function getPicture()
+	public function getEmail()
 	{
-		return $this->Picture;
-	}
-	
-	
-
-
-###################################### findByPk ######################################
-
-	function findByPk($pk)
-	{
-		$query=$this->db->query
-			('
-				SELECT name,picture WHERE id LIKE "%'. $pk .'%"
-			');
-			
-		return $query;
-	}
-###################################### findByPk ######################################
-
-
-###################################### findByAll ######################################
-
-	function findByAll($All)
-	{
-		$query=$this->db->query
-			('
-				SELECT id,name,picture  FROM member WHERE id  
-			');
-			
-		return $query;
-	}
-###################################### findByAll ######################################
-
-
-###################################### update ######################################
-
-	public function update()
-	{
-		$data = array(
-				'id'=>$this->getId(),
-				'name'=>$this->getName(),
-				'picture'=>$this->getPicture()
-       
-					  );
-	
-		$this->db->where('id', $this->getId());
-		$this->db->update('member', $data);
+		return $this->email;
 	}
 
-###################################### update ######################################
-
-
-###################################### delete ######################################
-
-	public function delete()
+		public function setUsername($username)
 	{
-			$array=array(
-				'id'=>$this->getId()
-
-				);
-		$this->db->delete('member',$array);
+		$this->username = $username;
 	}
-	
-###################################### delete ######################################
+
+	public function getUsername()
+	{
+		return $this->username;
+	}
+
+		public function setPassword($password)
+	{
+		$this->password = $password;
+	}
+
+	public function getPassword()
+	{
+		return $this->password;
+	}
+
+	public function setRepassword($repassword)
+	{
+		$this->repassword = $repassword;
+	}
+
+	public function getRepassword()
+	{
+		return $this->repassword;
+	}
+
 
 ###################################### add ######################################
 	public function add()
@@ -115,7 +88,11 @@ class Registerz extends CI_model
 		(
 			'id' => $this->getId(),
 			'name'  => $this->getName(),
-			'picture' => $this->getPicture()
+			'email' => $this->getEmail(),
+			'username' => $this->getUsername(),
+			'password' => $this->getPassword(),
+			'repassword' => $this->getRepassword()
+
 			
 		);
 
