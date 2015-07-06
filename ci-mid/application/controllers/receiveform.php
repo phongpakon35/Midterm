@@ -35,9 +35,17 @@ class Receiveform extends CI_Controller{
 
 		                      
 		                }
-		               	//$this->load->view('show',$data);
+		               	$this->load->view('show',$data);
 		        }
+		        
+		public function show()
+	{
+		$this->load->model('Member');
+		$data['students']=$this->Member->findByAll();
+		$this->load->view('show_student',$data);
 
+	}
+ 	
 
 	}
 

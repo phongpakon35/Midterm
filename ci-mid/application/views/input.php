@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <label>Name</label>
                     <input type="text" class="form-control" name="name"> <br><br>
                      <label>E-mail</label>
-                    <input type="text" class="form-control" name="e-mail"><br><br>
+                    <input type="text" class="form-control" name="email"><br><br>
                      <label>Username</label>
                     <input type="text" class="form-control" name="username"><br><br>
                      <label>Password</label>

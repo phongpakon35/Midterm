@@ -18,29 +18,29 @@ class Register extends CI_model
 		parent::__construct();
 	}
 	
-	function setId($Id)
+	public function setId($id)
 	{
-		$this->Id = $Id;
+		$this->id = $id;
+	}
+
+	public function getId()
+	{
+		return $this->id;
 	}
 
 	
-	function getId()
+	public function setName($name)
 	{
-		return $this->Id;
-	}
-	
-	function setName($Name)
-	{
-		$this->Name = $Name;
+		$this->name = $name;
 	}
 
-	
-	function getName()
+	public function getName()
 	{
-		return $this->Name;
+		return $this->name;
 	}
+
 		
-		public function setEmail($email)
+	public function setEmail($email)
 	{
 		$this->email = $email;
 	}
@@ -86,7 +86,7 @@ class Register extends CI_model
 	{
 		$array = array
 		(
-			'id' => $this->getId(),
+	
 			'name'  => $this->getName(),
 			'email' => $this->getEmail(),
 			'username' => $this->getUsername(),
